@@ -1,8 +1,10 @@
 import  random
-choices=["rock","paper","scissors"]
-computer=random.choice(choices)
-player=None
-while player not in choices:
+
+choices = ["rock", "paper", "scissors"]
+computer = random.choice(choices)
+while True:
+ player=None
+ while player not in choices:
   player=input("rock,paper,or scissors?:").lower()
   if player==computer:
       print("Tie")
@@ -32,4 +34,7 @@ while player not in choices:
       else:
         print("you win")
         print("computer:",computer,"player:",player)
-
+ player_choice=input(" do you want to play again (yes/no)?:")
+ if(player_choice!='yes'):
+      print('bye')
+      break
