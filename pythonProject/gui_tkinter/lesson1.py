@@ -1,6 +1,8 @@
 from tkinter import *
 
 window = Tk()
+
+
 #
 #
 # def handleSubmit():
@@ -22,14 +24,17 @@ window = Tk()
 # button = Button(window,text="submit", font=('Comic sans', 20), command=handleSubmit)
 # button.pack(side=RIGHT)
 def display():
-    if(x.get()):
+    if x.get():
         print("you agree")
     else:
         print("you disagree")
-x=BooleanVar()
-like_photo=PhotoImage(file="like.png")
-check_button=Checkbutton(window, text="I agree the terms above", variable=x,onvalue=True,offvalue=False,command=display,bg="black",fg="#00FF00",font=('Arial',16),activebackground="black",activeforeground="#00FF00",image=like_photo,compound=LEFT)
 
+
+x = BooleanVar()
+like_photo = PhotoImage(file="like.png")
+check_button = Checkbutton(window, text="I agree the terms above", variable=x, onvalue=True, offvalue=False,
+                           command=display, bg="black", fg="#00FF00", font=('Arial', 16), activebackground="black",
+                           activeforeground="#00FF00", image=like_photo, compound=LEFT)
 
 check_button.pack()
 window.mainloop()
